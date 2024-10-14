@@ -1,0 +1,151 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #030615;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+
+}
+
+.mainContainer {
+  display: 'flex' ;
+  flex-direction: 'column';
+}
+
+.loadingState {
+display:flex;
+align-items: center;
+justify-content: center;
+flex: 1;
+
+}
+.loadingState i  {
+  opacity: 0.7 ;
+  font-size:  3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to 
+  {transform: rotate(360deg)}
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bgImage {
+width: 80%;
+height: 100%;
+flex:1;
+}
+
+.bgGradinet {
+  position: absolute;
+  inset : 0;
+  z-index: -1;
+  background: linear-gradient(to, top, #030615, rgba(255,255,255,0))
+
+}
+
+
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+footer h2 {
+  font-size: 1.4rem;
+}
+
+footer h1 {
+  width: 10%;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+footer button {
+  background: orange;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.footerContent {
+  display: block;
+  flex: 1;
+  flex-direction: column;
+
+}
+footer button i {
+  font-size: 1.3rem;
+  display: inline-block;
+
+}
+footer button:hover {
+opacity: 0.5;
+
+}
+
+.sidebar {
+  position: absolute;
+  width: 20%;
+  right: 0;
+  background-color:black;
+  opacity: 0.7;
+  color:white;
+  }
+
+.sidebarContent {
+    padding: 5%;
+  }
+
+.sidebarContent button {
+  background-color: orange;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: auto;
+  cursor: pointer;
+  transition-duration:200ms;
+  padding: 1rem;
+}
+
+.sidebarContent button:hover {
+opacity: 0.7;
+}
+
